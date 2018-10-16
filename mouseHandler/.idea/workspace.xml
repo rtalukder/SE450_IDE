@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a68c8a5a-6117-4fff-a6dc-ec8ffb3dec55" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/se450.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/Homework1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/out/production/Homework1/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/out/production/Homework1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/out/production/Homework1/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/out/production/Homework1/StudentTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/src/Class.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/src/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Homework1/src/StudentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Lectures/Week+1+Lecture.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Syllabus SE 450.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/EqualsDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/bin/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/bin/StringObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/bin/SwapTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Demos/UnitTestDemo/src/SwapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Readings/Dependency Inversion Principle.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Readings/Interface Segregation Principle.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Readings/Liskov Substitution Principle.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Readings/Open-Close Principle.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SE 450/Week 1/Readings/Single Responsibility Principle.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/demos/EqualsDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/demos/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/demos/SwapTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/Homework1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/out/production/Homework1/Class.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/out/production/Homework1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/out/production/Homework1/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/out/production/Homework1/StudentTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/src/Class.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/src/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../week1/hw1/src/StudentTest.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="384366194">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="6" />
+          <entry key="jnlp" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="6" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.types.edit" />
+      <usages-collector id="statistics.file.extensions.edit" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/events/BlankArea.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2104#2105#0" expanded="true" />
+                <element signature="e#2134#2135#0" expanded="true" />
+                <element signature="e#2177#2178#0" expanded="true" />
+                <element signature="e#2207#2208#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/events/MouseEventDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="138" column="39" lean-forward="true" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5179#5180#0" expanded="true" />
+                <element signature="e#5226#5227#0" expanded="true" />
+                <element signature="e#5275#5276#0" expanded="true" />
+                <element signature="e#5321#5322#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main.java" />
+        <option value="$PROJECT_DIR$/src/MouseEventDemo.java" />
+        <option value="$PROJECT_DIR$/src/BlankArea.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="962" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mouseHandler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mouseHandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mouseHandler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mouseHandler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mouseHandler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mouseHandler" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539197424858" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MouseMotionEventDemo">
+    <configuration name="MouseEventDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="events.MouseEventDemo" />
+      <module name="mouseHandler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MouseMotionEventDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="events.MouseMotionEventDemo" />
+      <module name="mouseHandler" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MouseEventDemo" />
+      <item itemvalue="Application.MouseMotionEventDemo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MouseMotionEventDemo" />
+        <item itemvalue="Application.MouseEventDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a68c8a5a-6117-4fff-a6dc-ec8ffb3dec55" name="Default Changelist" comment="" />
+      <created>1539176157600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539176157600</updated>
+      <workItem from="1539176160153" duration="4662000" />
+      <workItem from="1539208872682" duration="3297000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7959000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="962" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3293979" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39905548" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.java" />
+    <entry file="file://$PROJECT_DIR$/src/MouseEventDemo.java" />
+    <entry file="file://$PROJECT_DIR$/src/BlankArea.java" />
+    <entry file="file://$PROJECT_DIR$/src/events/MouseEventDemo.jnlp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-364" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/events/BlankArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2104#2105#0" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2177#2178#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/events/MouseMotionEventDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="115" column="40" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="40" />
+          <folding>
+            <element signature="e#2172#2253#0" />
+            <element signature="e#5041#5042#0" expanded="true" />
+            <element signature="e#5086#5087#0" expanded="true" />
+            <element signature="e#5136#5137#0" expanded="true" />
+            <element signature="e#5183#5184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/events/MouseEventDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="138" column="39" lean-forward="true" selection-start-line="138" selection-start-column="39" selection-end-line="138" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5179#5180#0" expanded="true" />
+            <element signature="e#5226#5227#0" expanded="true" />
+            <element signature="e#5275#5276#0" expanded="true" />
+            <element signature="e#5321#5322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
