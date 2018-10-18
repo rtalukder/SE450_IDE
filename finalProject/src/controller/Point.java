@@ -47,10 +47,10 @@ public void normalizedCoordinates(Point startPoint, Point endPoint){
 
         }
 
-/*        this.length = xRelease - xClick;
-        this.width = yRelease - yClick;
+        int length = startPoint.x - endPoint.x;
+        int width = startPoint.y - endPoint.y;
 
-        return this;*/
+        //return this;
     }
 
 

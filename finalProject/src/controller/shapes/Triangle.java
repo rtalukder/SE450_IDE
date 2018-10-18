@@ -8,7 +8,7 @@ import model.persistence.ShapeData;
 
 import java.awt.*;
 
-public class Shape implements IShape {
+public class Triangle implements IShape {
     private int x;
     private int y;
     private int height;
@@ -22,7 +22,7 @@ public class Shape implements IShape {
     private ShapeShadingType shapeShadingType;
     private ShapeType shapeType;
 
-    public Shape(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData){
+    public Triangle(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData){
         this.graphics = graphics;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
@@ -30,6 +30,11 @@ public class Shape implements IShape {
         this.secondaryShapeColor = shapeData.activeSecondaryColor;
         this.shapeShadingType = shapeData.activeShapeShadingType;
         this.shapeType = shapeData.activeShapeType;
+    }
+
+    @Override
+    public void drawShape() {
+
     }
 
     @Override
@@ -62,8 +67,4 @@ public class Shape implements IShape {
         return shapeType;
     }
 
-    @Override
-    public void drawShape() {
-
-    }
 }

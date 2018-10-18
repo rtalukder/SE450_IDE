@@ -6,10 +6,10 @@ import model.ShapeType;
 
 public class ShapeData  {
 
-    private ShapeColor activePrimaryColor;
-    private ShapeColor activeSecondaryColor;
-    private ShapeShadingType activeShapeShadingType;
-    private ShapeType activeShapeType;
+    public ShapeColor activePrimaryColor;
+    public ShapeColor activeSecondaryColor;
+    public ShapeShadingType activeShapeShadingType;
+    public ShapeType activeShapeType;
 
     public ShapeData(ShapeColor primaryShapeColor, ShapeColor secondaryShapeColor, ShapeShadingType shapeShadingType, ShapeType shapeType){
         activePrimaryColor = primaryShapeColor;

@@ -1,5 +1,6 @@
 package controller;
 
+import com.sun.media.sound.InvalidDataException;
 import controller.commands.ICommand;
 import controller.commands.CreateShapeCommand;
 import controller.Point;
@@ -13,12 +14,12 @@ import java.awt.event.MouseEvent;
 
 public class MouseHandler extends MouseAdapter {
     private Graphics2D graphics;
-    private ShapeData shapeDetails;
     private Point startPoint;
     private Point endPoint;
+    private ApplicationState appState;
 
     public MouseHandler(ApplicationState appState, Graphics2D graphics){
-        shapeDetails = appState.getShapeDataObject();
+        this.appState = appState;
         this.graphics = graphics;
     }
 
@@ -43,7 +44,18 @@ public class MouseHandler extends MouseAdapter {
         System.out.println("Mouse released x-coordinate: " + e.getX());
         System.out.println("Mouse released y-coordinate: " + e.getY());
 
-        ICommand command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeDetails);
+        System.out.println(appState.getActivePrimaryColor());
+        System.out.println(appState.getActiveSecondaryColor());
+
+        ShapeData shapeData = new ShapeData(appState.getActivePrimaryColor(), appState.getActiveSecondaryColor(), appState.getActiveShapeShadingType(), appState.getActiveShapeType());
+
+        ICommand command = null;
+
+        try {
+            command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeData);
+        } catch (InvalidDataException message) {
+            message.printStackTrace();
+        }
         command.run();
     }
 }
