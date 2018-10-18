@@ -10,15 +10,15 @@ import java.awt.event.MouseEvent;
 
 public class MouseClick extends MouseAdapter {
 
-    private int xClick;
-    private int yClick;
-    private int xRelease;
-    private int yRelease;
+    private Point startPoint;
+    private Point endPoint;
 
     @Override
     public void mousePressed(MouseEvent e){
-        xClick = e.getX();
-        yClick = e.getY();
+        int xClick = e.getX();
+        int yClick = e.getY();
+
+        startPoint = new Point(xClick, yClick);
 
         System.out.println("Mouse clicked x-coordinate: " + e.getX());
         System.out.println("Mouse clicked y-coordinate: " + e.getY());
@@ -26,14 +26,16 @@ public class MouseClick extends MouseAdapter {
 
     @Override
     public void mouseReleased(MouseEvent e){
-        xRelease = e.getX();
-        yRelease = e.getY();
+        int xRelease = e.getX();
+        int yRelease = e.getY();
+
+        endPoint = new Point(xRelease, yRelease);
 
         System.out.println("Mouse released x-coordinate: " + e.getX());
         System.out.println("Mouse released y-coordinate: " + e.getY());
 
 
-        ICommand command = new CreateShapeCommand(new Point(xClick, yClick, xRelease, yRelease).normalizedCoordinates());
+        ICommand command = new CreateShapeCommand();
 
         // TODO
         /*  Create application state object that has the following:

@@ -4,22 +4,34 @@ import controller.commands.*;
 
 public class Point {
 
-    int xClick;
-    int yClick;
-    int xRelease;
-    int yRelease;
+    private int x;
+    private int y;
 
-    int length;
-    int width;
-
-    public Point(int xClick, int yClick, int xRelease, int yRelease){
-        this.xClick = xClick;
-        this.yClick = yClick;
-        this.xRelease = xRelease;
-        this.yRelease = yRelease;
+    public Point(int x, int y){
+        this.x = x;
+        this.y = y;
     }
 
-    public Point normalizedCoordinates(){
+    public int getX(){
+        return x;
+    }
+
+    public int getY(){
+        return y;
+    }
+
+    public String toString(){
+        return ("x: " + x + ", y: " + y );
+    }
+
+    public double distanceTo(Point otherPoint) {
+        double dx = this.x - otherPoint.x;
+        double dy = this.y - otherPoint.y;
+        
+        return Math.sqrt(dx*dx + dy*dy);
+    }
+
+/*    public Point normalizedCoordinates(){
 
         if (xClick > xRelease) {
             int temp;
@@ -40,7 +52,7 @@ public class Point {
         this.width = yRelease - yClick;
 
         return this;
-    }
+    }*/
 
 
 }
