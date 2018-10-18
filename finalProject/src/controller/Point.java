@@ -1,7 +1,5 @@
 package controller;
 
-import controller.commands.*;
-
 public class Point {
 
     private int x;
@@ -24,35 +22,36 @@ public class Point {
         return ("x: " + x + ", y: " + y );
     }
 
+    // euclidian distance calculated
     public double distanceTo(Point otherPoint) {
         double dx = this.x - otherPoint.x;
         double dy = this.y - otherPoint.y;
-        
+
         return Math.sqrt(dx*dx + dy*dy);
     }
 
-/*    public Point normalizedCoordinates(){
+public void normalizedCoordinates(Point startPoint, Point endPoint){
 
-        if (xClick > xRelease) {
+        if (startPoint.x > endPoint.x) {
             int temp;
-            temp = xClick;
-            xClick = xRelease;
-            xRelease = temp;
+            temp = startPoint.x;
+            startPoint.x = endPoint.x;
+            endPoint.x = temp;
         }
 
-        if (yClick > yRelease){
+        if (startPoint.y > endPoint.y){
             int temp;
-            temp = yClick;
-            yClick = yRelease;
-            yRelease = temp;
+            temp = startPoint.y;
+            startPoint.y =  endPoint.y;
+            endPoint.y = temp;
 
         }
 
-        this.length = xRelease - xClick;
+/*        this.length = xRelease - xClick;
         this.width = yRelease - yClick;
 
-        return this;
-    }*/
+        return this;*/
+    }
 
 
 }

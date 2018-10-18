@@ -1,17 +1,26 @@
-package myPackage;
+package controller;
 
 import controller.commands.ICommand;
 import controller.commands.CreateShapeCommand;
 import controller.Point;
 import model.persistence.ApplicationState;
+import model.persistence.ShapeData;
+import main.Main;
 
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class MouseClick extends MouseAdapter {
-
+public class MouseHandler extends MouseAdapter {
+    private Graphics2D graphics;
+    private ShapeData shapeDetails;
     private Point startPoint;
     private Point endPoint;
+
+    public MouseHandler(ApplicationState appState, Graphics2D graphics){
+        shapeDetails = appState.getShapeDataObject();
+        this.graphics = graphics;
+    }
 
     @Override
     public void mousePressed(MouseEvent e){
@@ -34,20 +43,7 @@ public class MouseClick extends MouseAdapter {
         System.out.println("Mouse released x-coordinate: " + e.getX());
         System.out.println("Mouse released y-coordinate: " + e.getY());
 
-
-        ICommand command = new CreateShapeCommand();
-
-        // TODO
-        /*  Create application state object that has the following:
-        * - active shape type
-        * - primary color
-        * - secondary color
-        * - shading type
-        *
-        * Pass this object into createshapecommand()                 */
-
-
-
+        ICommand command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeDetails);
         command.run();
     }
 }
