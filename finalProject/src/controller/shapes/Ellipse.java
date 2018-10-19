@@ -6,6 +6,7 @@ import model.ShapeShadingType;
 import model.ShapeType;
 import model.persistence.ShapeData;
 
+import java.lang.reflect.Field;
 import java.awt.*;
 
 public class Ellipse implements IShape {
@@ -39,7 +40,45 @@ public class Ellipse implements IShape {
         width = Math.abs(startPoint.getX() - endPoint.getX());
         height = Math.abs(startPoint.getY() - endPoint.getY());
 
-        graphics.drawOval(x, y, width, height);
+        String shapeShadingTypeString = shapeShadingType.toString();
+
+        Color primaryColor;
+        Color secondaryColor;
+
+        try {
+            Field primaryColorField = Color.class.getField(primaryShapeColor.toString());
+            primaryColor = (Color)primaryColorField.get(null);
+
+            Field secondaryColorField = Color.class.getField(secondaryShapeColor.toString());
+            secondaryColor = (Color)secondaryColorField.get(null);
+        } catch (Exception e) {
+            // not defined
+            primaryColor = null;
+            secondaryColor = null;
+        }
+
+        /*
+        TODO - refactor code to use strategy pattern
+         */
+
+        switch(shapeShadingTypeString){
+            case "FILLED_IN":
+                graphics.setColor(primaryColor);
+                graphics.fillOval(x, y, width, height);
+                break;
+
+            case "OUTLINE":
+                graphics.setColor(primaryColor);
+                graphics.drawOval(x, y, width, height);
+                break;
+
+            case "OUTLINE_AND_FILLED_IN":
+                graphics.setColor(primaryColor);
+                graphics.fillOval(x, y, width, height);
+                graphics.setColor(secondaryColor);
+                graphics.drawOval(x, y, width, height);
+                break;
+        }
     }
 
     @Override

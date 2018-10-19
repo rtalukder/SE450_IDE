@@ -29,23 +29,14 @@ public class CreateShapeCommand extends PaintCanvas implements ICommand {
 
         switch(shapeTypeString){
             case "RECTANGLE":
-                System.out.println("shape is rectangle");
-                System.out.println(shapeData.activePrimaryColor);
-                System.out.println(shapeData.activeSecondaryColor);
                 shape = ShapeFactory.createRectangle(graphics, startPoint, endPoint, shapeData);
                 break;
 
             case "ELLIPSE":
-                System.out.println("shape is ellipse");
-                System.out.println(shapeData.activePrimaryColor);
-                System.out.println(shapeData.activeSecondaryColor);
                 shape = ShapeFactory.createEllipse(graphics, startPoint, endPoint, shapeData);
                 break;
 
             case "TRIANGLE":
-                System.out.println("shape is triangle");
-                System.out.println(shapeData.activePrimaryColor);
-                System.out.println(shapeData.activeSecondaryColor);
                 shape = ShapeFactory.createTriangle(graphics, startPoint, endPoint, shapeData);
                 break;
             }

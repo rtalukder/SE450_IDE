@@ -7,6 +7,7 @@ import model.ShapeType;
 import model.persistence.ShapeData;
 
 import java.awt.*;
+import java.lang.reflect.Field;
 
 public class Rectangle implements IShape {
     private int x;
@@ -40,20 +41,46 @@ public class Rectangle implements IShape {
         height = Math.abs(startPoint.getY() - endPoint.getY());
 
         String shapeShadingTypeString = shapeShadingType.toString();
-        Rectangle rectangle = this;
+
+        IShadingTypeStrategy strategy = null;
+
+        Color primaryColor;
+        Color secondaryColor;
+
+        try {
+            Field primaryColorField = Color.class.getField(primaryShapeColor.toString());
+            primaryColor = (Color)primaryColorField.get(null);
+
+            Field secondaryColorField = Color.class.getField(secondaryShapeColor.toString());
+            secondaryColor = (Color)secondaryColorField.get(null);
+        } catch (Exception e) {
+            // not defined
+            primaryColor = null;
+            secondaryColor = null;
+        }
+
+        /*
+        TODO - refactor code to use strategy pattern
+         */
 
         switch(shapeShadingTypeString){
             case "FILLED_IN":
-                System.out.println("shape is rectangle");
+                graphics.setColor(primaryColor);
+                graphics.fillRect(x, y, width, height);
                 break;
 
             case "OUTLINE":
+                graphics.setColor(primaryColor);
+                graphics.drawRect(x, y, width, height);
                 break;
 
             case "OUTLINE_AND_FILLED_IN":
+                graphics.setColor(primaryColor);
+                graphics.fillRect(x, y, width, height);
+                graphics.setColor(secondaryColor);
+                graphics.drawRect(x, y, width, height);
                 break;
         }
-        graphics.drawRect(x, y, width, height);
     }
 
     @Override
