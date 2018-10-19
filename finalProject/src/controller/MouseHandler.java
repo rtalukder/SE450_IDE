@@ -1,17 +1,27 @@
-package myPackage;
+package controller;
 
+import com.sun.media.sound.InvalidDataException;
 import controller.commands.ICommand;
 import controller.commands.CreateShapeCommand;
 import controller.Point;
 import model.persistence.ApplicationState;
+import model.persistence.ShapeData;
+import main.Main;
 
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class MouseClick extends MouseAdapter {
-
+public class MouseHandler extends MouseAdapter {
+    private Graphics2D graphics;
     private Point startPoint;
     private Point endPoint;
+    private ApplicationState appState;
+
+    public MouseHandler(ApplicationState appState, Graphics2D graphics){
+        this.appState = appState;
+        this.graphics = graphics;
+    }
 
     @Override
     public void mousePressed(MouseEvent e){
@@ -34,20 +44,18 @@ public class MouseClick extends MouseAdapter {
         System.out.println("Mouse released x-coordinate: " + e.getX());
         System.out.println("Mouse released y-coordinate: " + e.getY());
 
+        System.out.println(appState.getActivePrimaryColor());
+        System.out.println(appState.getActiveSecondaryColor());
 
-        ICommand command = new CreateShapeCommand();
+        ShapeData shapeData = new ShapeData(appState.getActivePrimaryColor(), appState.getActiveSecondaryColor(), appState.getActiveShapeShadingType(), appState.getActiveShapeType());
 
-        // TODO
-        /*  Create application state object that has the following:
-        * - active shape type
-        * - primary color
-        * - secondary color
-        * - shading type
-        *
-        * Pass this object into createshapecommand()                 */
+        ICommand command = null;
 
-
-
+        try {
+            command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeData);
+        } catch (InvalidDataException message) {
+            message.printStackTrace();
+        }
         command.run();
     }
 }

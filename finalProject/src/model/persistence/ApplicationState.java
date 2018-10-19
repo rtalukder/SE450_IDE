@@ -85,5 +85,4 @@ public class ApplicationState implements IApplicationState, Serializable {
         activeShapeShadingType = ShapeShadingType.FILLED_IN;
         activeStartAndEndPointMode = StartAndEndPointMode.DRAW;
     }
-    
 }
