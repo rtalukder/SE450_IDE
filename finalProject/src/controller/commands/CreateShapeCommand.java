@@ -45,7 +45,7 @@ public class CreateShapeCommand extends PaintCanvas implements ICommand {
     @Override
     public void run() {
         ShapeList.addToShapeList(shape);
-        shape.drawShape();
+        //shape.drawShape(); // will evenually need to take this line out
         //update();
         //shape.drawShape(graphics);
     }

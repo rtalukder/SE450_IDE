@@ -1,6 +1,10 @@
 package controller.shapes;
 
 import controller.Point;
+import controller.shapes.shading.FilledInEllipse;
+import controller.shapes.shading.IShadingTypeStrategy;
+import controller.shapes.shading.OutlinedAndFilledEllipse;
+import controller.shapes.shading.OutlinedEllipse;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
@@ -41,6 +45,7 @@ public class Ellipse implements IShape {
         height = Math.abs(startPoint.getY() - endPoint.getY());
 
         String shapeShadingTypeString = shapeShadingType.toString();
+        IShadingTypeStrategy strategy = null;
 
         Color primaryColor;
         Color secondaryColor;
@@ -57,28 +62,21 @@ public class Ellipse implements IShape {
             secondaryColor = null;
         }
 
-        /*
-        TODO - refactor code to use strategy pattern
-         */
-
         switch(shapeShadingTypeString){
             case "FILLED_IN":
-                graphics.setColor(primaryColor);
-                graphics.fillOval(x, y, width, height);
+                strategy = new FilledInEllipse();
                 break;
 
             case "OUTLINE":
-                graphics.setColor(primaryColor);
-                graphics.drawOval(x, y, width, height);
+                strategy = new OutlinedEllipse();
                 break;
 
             case "OUTLINE_AND_FILLED_IN":
-                graphics.setColor(primaryColor);
-                graphics.fillOval(x, y, width, height);
-                graphics.setColor(secondaryColor);
-                graphics.drawOval(x, y, width, height);
+                strategy = new OutlinedAndFilledEllipse();
                 break;
         }
+
+        strategy.drawShape(graphics, x, y, width, height, primaryColor, secondaryColor);
     }
 
     @Override

@@ -2,56 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaf89f03-e2c5-4343-b207-29e4e5f386c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/se450.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/Homework1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/out/production/Homework1/Class.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/out/production/Homework1/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/out/production/Homework1/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/out/production/Homework1/StudentTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/src/Class.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/src/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Homework1/src/StudentTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Lectures/Week+1+Lecture.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Syllabus SE 450.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/EqualsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/.classpath" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/bin/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/bin/StringObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/bin/SwapTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Demos/UnitTestDemo/src/SwapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Readings/Dependency Inversion Principle.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Readings/Interface Segregation Principle.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Readings/Liskov Substitution Principle.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Readings/Open-Close Principle.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SE 450/Week 1/Readings/Single Responsibility Principle.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/demos/EqualsDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/demos/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/demos/SwapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/Homework1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/out/production/Homework1/Class.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/out/production/Homework1/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/out/production/Homework1/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/out/production/Homework1/StudentTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/src/Class.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/src/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week1/hw1/src/StudentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/out/production/finalProject/controller/commands/CreateShapeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject/out/production/finalProject/controller/commands/CreateShapeCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/out/production/finalProject/controller/shapes/ColorDecode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/out/production/finalProject/controller/shapes/Ellipse.class" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject/out/production/finalProject/controller/shapes/Ellipse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/out/production/finalProject/controller/shapes/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject/out/production/finalProject/controller/shapes/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/src/controller/ShapeDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject/src/controller/ShapeDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/src/controller/ShapeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject/src/controller/ShapeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finalProject/src/controller/commands/CreateShapeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/finalProject/src/controller/commands/CreateShapeCommand.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,10 +23,11 @@
     <session id="-147358361">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -85,10 +45,10 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -109,6 +69,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,7 +81,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -182,16 +142,18 @@
       <workItem from="1539122705112" duration="20000" />
       <workItem from="1539122728746" duration="653000" />
       <workItem from="1539192324372" duration="9000" />
+      <workItem from="1540251522371" duration="8000" />
+      <workItem from="1540251533127" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="909000" />
+    <option name="totallyTimeSpent" value="918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="962" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
