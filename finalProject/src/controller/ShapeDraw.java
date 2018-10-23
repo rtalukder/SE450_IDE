@@ -1,9 +1,13 @@
 package controller;
 
-public class ShapeDraw {
+import controller.shapes.IShape;
 
-    // TODO
-    /* implement observer pattern here
+public class ShapeDraw implements IShapeDrawObserver {
 
-     */
+    @Override
+    public void update() {
+        for (IShape shape : ShapeList.shapeList){
+            shape.drawShape();
+        }
+    }
 }

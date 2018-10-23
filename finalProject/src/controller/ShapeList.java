@@ -4,17 +4,23 @@ import controller.shapes.IShape;
 import java.util.List;
 import java.util.ArrayList;
 
-public class ShapeList {
-    private static List<IShape> shapeList = new ArrayList<IShape>();
+public class ShapeList implements ISubject {
+    private static List<IShapeDrawObserver> observers = new ArrayList<>();
+    public static List<IShape> shapeList = new ArrayList<IShape>();
 
     public static void addToShapeList(IShape shape){
         shapeList.add(shape);
+        notifyObserver();
     }
 
-    // TODO
-    /* implement observer pattern here
+    @Override
+    public void registerObserver(IShapeDrawObserver observer) {
+        observers.add(observer);
+    }
 
-       should send an update to ShapeDraw when a new shape is added
-       update will draw the shape
-     */
+    public static void notifyObserver(){
+        for (IShapeDrawObserver observer : observers){
+            observer.update();
+        }
+    }
 }

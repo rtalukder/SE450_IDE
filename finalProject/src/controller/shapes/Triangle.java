@@ -1,18 +1,21 @@
 package controller.shapes;
 
 import controller.Point;
+import controller.shapes.shading.*;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
 import model.persistence.ShapeData;
 
 import java.awt.*;
+import java.lang.reflect.Field;
 
 public class Triangle implements IShape {
     private int x;
     private int y;
     private int height;
     private int width;
+    private final int MAX_NUMBER_OF_POINTS = 3;
 
     private Graphics2D graphics;
     private Point startPoint;
@@ -34,7 +37,60 @@ public class Triangle implements IShape {
 
     @Override
     public void drawShape() {
+        int qx = 0, rx= 0, qy= 0, ry= 0;
+        int px = Math.min(startPoint.getX(), endPoint.getX());
+        int py = 0;
+        if(px == startPoint.getX()){
+            py = startPoint.getY();
+            qx = endPoint.getX();
+            qy = startPoint.getY();
+            rx = Math.max(x, endPoint.getX());
+            ry = endPoint.getY();
+        }
+        else if(px == endPoint.getX()){
+            qx = startPoint.getX();
+            py = startPoint.getY();
+            rx = endPoint.getX();
+            qy = endPoint.getY();
+            ry = endPoint.getY();
+        }
 
+        int [] xArray = {qx,px,rx};
+        int [] yArray = {qy,py,ry};
+
+        String shapeShadingTypeString = shapeShadingType.toString();
+        IShadingTypeStrategyTriangle strategy = null;
+
+        Color primaryColor;
+        Color secondaryColor;
+
+        try {
+            Field primaryColorField = Color.class.getField(primaryShapeColor.toString());
+            primaryColor = (Color)primaryColorField.get(null);
+
+            Field secondaryColorField = Color.class.getField(secondaryShapeColor.toString());
+            secondaryColor = (Color)secondaryColorField.get(null);
+        } catch (Exception e) {
+            // not defined
+            primaryColor = null;
+            secondaryColor = null;
+        }
+
+        switch(shapeShadingTypeString){
+            case "FILLED_IN":
+                strategy = new FilledInTriangle();
+                break;
+
+            case "OUTLINE":
+                strategy = new OutlinedTriangle();
+                break;
+
+            case "OUTLINE_AND_FILLED_IN":
+                strategy = new OutlinedAndFilledTriangle();
+                break;
+        }
+
+        strategy.drawShape(graphics, xArray, yArray, width, height, primaryColor, secondaryColor, MAX_NUMBER_OF_POINTS);
     }
 
     @Override

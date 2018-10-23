@@ -1,9 +1,7 @@
 package main;
 
-import controller.IJPaintController;
-import controller.JPaintController;
+import controller.*;
 import model.persistence.ApplicationState;
-import controller.MouseHandler;
 import view.gui.Gui;
 import view.gui.GuiWindow;
 import view.gui.PaintCanvas;
@@ -23,8 +21,12 @@ public class Main {
         MouseAdapter mouseAdapter = new MouseHandler(appState, paintCanvas.getGraphics2D());
         paintCanvas.addMouseListener(mouseAdapter);
 
-        controller.setup();
+        ShapeDraw observer = new ShapeDraw();
+        ShapeList handler = new ShapeList();
+        handler.registerObserver(observer);
 
+        controller.setup();
+/*
         // For example purposes only; remove from your final project.
         try {
             Thread.sleep(500);
@@ -34,12 +36,14 @@ public class Main {
         Graphics2D graphics2d = paintCanvas.getGraphics2D();
         graphics2d.setColor(Color.RED);
 
-/*        graphics2d.fillRect(12, 13, 200, 400);
+        graphics2d.fillRect(12, 13, 200, 400);
         graphics2d.setStroke(new BasicStroke(5));
         graphics2d.setColor(Color.BLUE);
         graphics2d.drawRect(300, 150, 150, 200);
         graphics2d.drawRect(150, 150, 100, 200);
         graphics2d.setColor(Color.RED);
-        graphics2d.drawRect(50, 600, 500, 10);*/
+        graphics2d.drawRect(50, 600, 500, 10);
+
+*/
     }
 }

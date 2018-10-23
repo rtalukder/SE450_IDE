@@ -1,6 +1,10 @@
 package controller.shapes;
 
 import controller.Point;
+import controller.shapes.shading.FilledInRectangle;
+import controller.shapes.shading.IShadingTypeStrategy;
+import controller.shapes.shading.OutlinedAndFilledRectangle;
+import controller.shapes.shading.OutlinedRectangle;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
@@ -41,7 +45,6 @@ public class Rectangle implements IShape {
         height = Math.abs(startPoint.getY() - endPoint.getY());
 
         String shapeShadingTypeString = shapeShadingType.toString();
-
         IShadingTypeStrategy strategy = null;
 
         Color primaryColor;
@@ -59,28 +62,21 @@ public class Rectangle implements IShape {
             secondaryColor = null;
         }
 
-        /*
-        TODO - refactor code to use strategy pattern
-         */
-
         switch(shapeShadingTypeString){
             case "FILLED_IN":
-                graphics.setColor(primaryColor);
-                graphics.fillRect(x, y, width, height);
+                strategy = new FilledInRectangle();
                 break;
 
             case "OUTLINE":
-                graphics.setColor(primaryColor);
-                graphics.drawRect(x, y, width, height);
+                strategy = new OutlinedRectangle();
                 break;
 
             case "OUTLINE_AND_FILLED_IN":
-                graphics.setColor(primaryColor);
-                graphics.fillRect(x, y, width, height);
-                graphics.setColor(secondaryColor);
-                graphics.drawRect(x, y, width, height);
+                strategy = new OutlinedAndFilledRectangle();
                 break;
         }
+
+        strategy.drawShape(graphics, x, y, width, height, primaryColor, secondaryColor);
     }
 
     @Override
