@@ -44,14 +44,14 @@ public class Triangle implements IShape {
             py = startPoint.getY();
             qx = endPoint.getX();
             qy = startPoint.getY();
-            rx = Math.max(x, endPoint.getX());
+            rx = Math.max(startPoint.getX(), endPoint.getX());
             ry = endPoint.getY();
         }
         else if(px == endPoint.getX()){
             qx = startPoint.getX();
+            qy = endPoint.getY();
             py = startPoint.getY();
             rx = endPoint.getX();
-            qy = endPoint.getY();
             ry = endPoint.getY();
         }
 
