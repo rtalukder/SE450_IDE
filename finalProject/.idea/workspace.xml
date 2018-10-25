@@ -68,13 +68,13 @@
     <session id="-1874856421">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -90,12 +90,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="15" />
-          <entry key="java" value="5028" />
+          <entry key="java" value="5048" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5028" />
+          <entry key="JAVA" value="5048" />
           <entry key="PLAIN_TEXT" value="15" />
         </counts>
       </usages-collector>
@@ -142,15 +142,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/shapes/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="185">
+              <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -265,8 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -365,13 +360,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/rtalukder/Desktop/SE450_IDE/finalProject/src/main/Main.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540260283261" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540505619551" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -419,17 +415,18 @@
       <workItem from="1540238635778" duration="3111000" />
       <workItem from="1540251542985" duration="8052000" />
       <workItem from="1540329297152" duration="318000" />
+      <workItem from="1540505305073" duration="298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67145000" />
+    <option name="totallyTimeSpent" value="67443000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="962" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22954823" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23199023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -638,13 +635,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/IShapeDrawObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/IShapeDrawObserver.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/commands/CreateShapeCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -669,13 +660,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ISubject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="53" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ISubject.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/ShapeDraw.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -698,41 +683,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading.java" />
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInEllipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedRectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedEllipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedAndFilledRectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedAndFilledEllipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInEllipse.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedRectangle.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedEllipse.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedAndFilledRectangle.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedAndFilledEllipse.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/shapes/Ellipse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-631">
@@ -745,69 +700,15 @@
         <state relative-caret-position="-188" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlineStrategyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlineAndFilledInStrategyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/IShadingTypeStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInStrategyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/IShadingTypeStrategyTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedAndFilledTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInRectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlineStrategyFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlineAndFilledInStrategyFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/IShadingTypeStrategy.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInStrategyFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/IShadingTypeStrategyTriangle.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInTriangle.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedAndFilledTriangle.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/FilledInRectangle.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/shapes/shading/OutlinedTriangle.java" />
     <entry file="file://$PROJECT_DIR$/src/controller/shapes/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-456">
@@ -817,11 +718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/shapes/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="185">
+          <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
         </state>
       </provider>
     </entry>

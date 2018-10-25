@@ -37,26 +37,26 @@ public class Triangle implements IShape {
 
     @Override
     public void drawShape() {
-        int qx = 0, rx= 0, qy= 0, ry= 0;
-        int px = Math.min(startPoint.getX(), endPoint.getX());
-        int py = 0;
-        if(px == startPoint.getX()){
-            py = startPoint.getY();
-            qx = endPoint.getX();
-            qy = startPoint.getY();
-            rx = Math.max(startPoint.getX(), endPoint.getX());
-            ry = endPoint.getY();
+        int x1 = 0, x3= 0, y1= 0, y3= 0;
+        int x2 = Math.min(startPoint.getX(), endPoint.getX());
+        int y2 = 0;
+        if(x2 == startPoint.getX()){
+            x2 = startPoint.getY();
+            x1 = endPoint.getX();
+            y1 = startPoint.getY();
+            x3 = Math.max(startPoint.getX(), endPoint.getX());
+            y3 = endPoint.getY();
         }
-        else if(px == endPoint.getX()){
-            qx = startPoint.getX();
-            qy = endPoint.getY();
-            py = startPoint.getY();
-            rx = endPoint.getX();
-            ry = endPoint.getY();
+        else if(x2 == endPoint.getX()){
+            x1 = startPoint.getX();
+            y1 = endPoint.getY();
+            x2 = startPoint.getY();
+            x3 = endPoint.getX();
+            y3 = endPoint.getY();
         }
 
-        int [] xArray = {qx,px,rx};
-        int [] yArray = {qy,py,ry};
+        int [] xArray = {x1,x2,x3};
+        int [] yArray = {y1,x2,y3};
 
         String shapeShadingTypeString = shapeShadingType.toString();
         IShadingTypeStrategyTriangle strategy = null;
