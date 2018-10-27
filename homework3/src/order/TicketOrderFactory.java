@@ -12,8 +12,9 @@ public class TicketOrderFactory {
 
     public ITicketOrder createTicketOrder(ITicket ticket, int quantity, boolean purchasedInsurance) {
         if(purchasedInsurance)
-            throw new Error("Create a TicketOrderProxy class and return a new instance of it here");
+            return new TicketOrderProxy(ticket, quantity, apiCaller);
         else
             return new TicketOrder(ticket, quantity, apiCaller);
     }
+
 }

@@ -42,10 +42,12 @@ public class TicketOrderTest {
         final DataRecorder dataRecorder = new DataRecorder();
         TicketOrderFactory ticketOrderFactory = new TicketOrderFactory((url, dataJson)
                 -> dataRecorder.apiCalls.add(new ApiCall(url, dataJson)));
+        //System.out.println(dataRecorder.apiCalls.size());
         TicketBuilder tb = new TicketBuilder();
         ITicket ticket = tb.addTicket("Pearl Jam", 80)
                 .addBonusPackage()
                 .getTicket();
+        //System.out.println(dataRecorder.apiCalls.size());
 
         ITicketOrder ticketOrder = ticketOrderFactory.createTicketOrder(ticket, 3, true);
 
