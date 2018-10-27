@@ -41,7 +41,7 @@ public class Triangle implements IShape {
         int x2 = Math.min(startPoint.getX(), endPoint.getX());
         int y2 = 0;
         if(x2 == startPoint.getX()){
-            x2 = startPoint.getY();
+            y2 = startPoint.getY();
             x1 = endPoint.getX();
             y1 = startPoint.getY();
             x3 = Math.max(startPoint.getX(), endPoint.getX());
@@ -50,13 +50,13 @@ public class Triangle implements IShape {
         else if(x2 == endPoint.getX()){
             x1 = startPoint.getX();
             y1 = endPoint.getY();
-            x2 = startPoint.getY();
+            y2 = startPoint.getY();
             x3 = endPoint.getX();
             y3 = endPoint.getY();
         }
 
         int [] xArray = {x1,x2,x3};
-        int [] yArray = {y1,x2,y3};
+        int [] yArray = {y1,y2,y3};
 
         String shapeShadingTypeString = shapeShadingType.toString();
         IShadingTypeStrategyTriangle strategy = null;
