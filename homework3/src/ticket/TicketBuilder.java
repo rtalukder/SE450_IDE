@@ -14,14 +14,12 @@ public class TicketBuilder {
     }
 
     public TicketBuilder addMeetAndGreet() {
-        throw new Error("Uncomment below and implement the MeetAndGreetTicket class");
-        //ticket = new MeetAndGreetTicket(ticket);
-        //return this;
+        ticket = new MeetAndGreetTicket(ticket);
+        return this;
     }
 
     public TicketBuilder addBonusPackage() {
-        throw new Error("Uncomment below and implement the BonusPackageTicket class");
-        //ticket = new BonusPackageTicket(ticket);
-        //return this;
+        ticket = new BonusPackageTicket(ticket);
+        return this;
     }
 }
