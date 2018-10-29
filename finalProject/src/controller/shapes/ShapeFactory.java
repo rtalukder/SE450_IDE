@@ -1,9 +1,9 @@
 package controller.shapes;
 
-import model.ShapeType;
 import model.persistence.ShapeData;
 import controller.Point;
 
+import controller.Point;
 import java.awt.*;
 
 public class ShapeFactory {

@@ -1,7 +1,7 @@
 package controller.shapes;
 
-import controller.Point;
 import controller.shapes.shading.*;
+import controller.Point;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
@@ -11,10 +11,6 @@ import java.awt.*;
 import java.lang.reflect.Field;
 
 public class Triangle implements IShape {
-    private int x;
-    private int y;
-    private int height;
-    private int width;
     private final int MAX_NUMBER_OF_POINTS = 3;
 
     private Graphics2D graphics;
@@ -61,20 +57,9 @@ public class Triangle implements IShape {
         String shapeShadingTypeString = shapeShadingType.toString();
         IShadingTypeStrategyTriangle strategy = null;
 
-        Color primaryColor;
-        Color secondaryColor;
-
-        try {
-            Field primaryColorField = Color.class.getField(primaryShapeColor.toString());
-            primaryColor = (Color)primaryColorField.get(null);
-
-            Field secondaryColorField = Color.class.getField(secondaryShapeColor.toString());
-            secondaryColor = (Color)secondaryColorField.get(null);
-        } catch (Exception e) {
-            // not defined
-            primaryColor = null;
-            secondaryColor = null;
-        }
+        TranslateEnumColor colorTranslate = new TranslateEnumColor();
+        Color primaryColor = colorTranslate.getColor(primaryShapeColor);
+        Color secondaryColor = colorTranslate.getColor(secondaryShapeColor);
 
         switch(shapeShadingTypeString){
             case "FILLED_IN":
@@ -90,17 +75,7 @@ public class Triangle implements IShape {
                 break;
         }
 
-        strategy.drawShape(graphics, xArray, yArray, width, height, primaryColor, secondaryColor, MAX_NUMBER_OF_POINTS);
-    }
-
-    @Override
-    public int getX() {
-        return x;
-    }
-
-    @Override
-    public int getY() {
-        return y;
+        strategy.drawShape(graphics, xArray, yArray, primaryColor, secondaryColor, MAX_NUMBER_OF_POINTS);
     }
 
     @Override
