@@ -47,20 +47,9 @@ public class Ellipse implements IShape {
         String shapeShadingTypeString = shapeShadingType.toString();
         IShadingTypeStrategy strategy = null;
 
-        Color primaryColor;
-        Color secondaryColor;
-
-        try {
-            Field primaryColorField = Color.class.getField(primaryShapeColor.toString());
-            primaryColor = (Color)primaryColorField.get(null);
-
-            Field secondaryColorField = Color.class.getField(secondaryShapeColor.toString());
-            secondaryColor = (Color)secondaryColorField.get(null);
-        } catch (Exception e) {
-            // not defined
-            primaryColor = null;
-            secondaryColor = null;
-        }
+        TranslateEnumColor colorTranslate = new TranslateEnumColor();
+        Color primaryColor = colorTranslate.getColor(primaryShapeColor);
+        Color secondaryColor = colorTranslate.getColor(secondaryShapeColor);
 
         switch(shapeShadingTypeString){
             case "FILLED_IN":
@@ -77,16 +66,6 @@ public class Ellipse implements IShape {
         }
 
         strategy.drawShape(graphics, x, y, width, height, primaryColor, secondaryColor);
-    }
-
-    @Override
-    public int getX() {
-        return x;
-    }
-
-    @Override
-    public int getY() {
-        return y;
     }
 
     @Override

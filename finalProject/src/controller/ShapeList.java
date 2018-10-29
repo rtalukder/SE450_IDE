@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class ShapeList implements ISubject {
     private static List<IShapeDrawObserver> observers = new ArrayList<>();
-    public static List<IShape> shapeList = new ArrayList<IShape>();
+    public static List<IShape> shapeList = new ArrayList<>();
 
     public static void addToShapeList(IShape shape){
         shapeList.add(shape);

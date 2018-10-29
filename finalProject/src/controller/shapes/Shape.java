@@ -9,14 +9,10 @@ import model.persistence.ShapeData;
 import java.awt.*;
 
 public class Shape implements IShape {
-    private int x;
-    private int y;
-    private int height;
-    private int width;
-
     private Graphics2D graphics;
     private Point startPoint;
     private Point endPoint;
+    private ShapeData shapeData;
     private ShapeColor primaryShapeColor;
     private ShapeColor secondaryShapeColor;
     private ShapeShadingType shapeShadingType;
@@ -26,6 +22,7 @@ public class Shape implements IShape {
         this.graphics = graphics;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
+        this.shapeData = shapeData;
         this.primaryShapeColor = shapeData.activePrimaryColor;
         this.secondaryShapeColor = shapeData.activeSecondaryColor;
         this.shapeShadingType = shapeData.activeShapeShadingType;
@@ -33,13 +30,27 @@ public class Shape implements IShape {
     }
 
     @Override
-    public int getX() {
-        return x;
-    }
+    public void drawShape() {
 
-    @Override
-    public int getY() {
-        return y;
+        IShape shape = null;
+        String shapeTypeString = (shapeData.activeShapeType).toString();
+
+        switch(shapeTypeString){
+            case "RECTANGLE":
+                shape = ShapeFactory.createRectangle(graphics, startPoint, endPoint, shapeData);
+                break;
+
+            case "ELLIPSE":
+                shape = ShapeFactory.createEllipse(graphics, startPoint, endPoint, shapeData);
+                break;
+
+            case "TRIANGLE":
+                shape = ShapeFactory.createTriangle(graphics, startPoint, endPoint, shapeData);
+                break;
+        }
+
+        shape.drawShape();
+
     }
 
     @Override
@@ -62,8 +73,4 @@ public class Shape implements IShape {
         return shapeType;
     }
 
-    @Override
-    public void drawShape() {
-
-    }
 }

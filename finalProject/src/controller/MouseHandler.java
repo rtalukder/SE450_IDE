@@ -1,12 +1,11 @@
 package controller;
 
-import com.sun.media.sound.InvalidDataException;
 import controller.commands.ICommand;
 import controller.commands.CreateShapeCommand;
-import controller.Point;
+import controller.commands.MoveCommand;
+import controller.commands.SelectCommand;
 import model.persistence.ApplicationState;
 import model.persistence.ShapeData;
-import main.Main;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -29,33 +28,36 @@ public class MouseHandler extends MouseAdapter {
         int yClick = e.getY();
 
         startPoint = new Point(xClick, yClick);
-
-        System.out.println("Mouse clicked x-coordinate: " + e.getX());
-        System.out.println("Mouse clicked y-coordinate: " + e.getY());
     }
 
     @Override
-    public void mouseReleased(MouseEvent e){
+    public void mouseReleased(MouseEvent e) {
         int xRelease = e.getX();
         int yRelease = e.getY();
 
         endPoint = new Point(xRelease, yRelease);
 
-        System.out.println("Mouse released x-coordinate: " + e.getX());
-        System.out.println("Mouse released y-coordinate: " + e.getY());
-
-        System.out.println(appState.getActivePrimaryColor());
-        System.out.println(appState.getActiveSecondaryColor());
-
         ShapeData shapeData = new ShapeData(appState.getActivePrimaryColor(), appState.getActiveSecondaryColor(), appState.getActiveShapeShadingType(), appState.getActiveShapeType());
-
         ICommand command = null;
 
-        try {
-            command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeData);
-        } catch (InvalidDataException message) {
-            message.printStackTrace();
+        switch (appState.getActiveStartAndEndPointMode().toString()){
+            case "DRAW":
+                if(e.getButton() == MouseEvent.BUTTON1) {
+                    command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeData);
+                }
+                else if(e.getButton() == MouseEvent.BUTTON3){
+                    ShapeData rightClickedShapeData = new ShapeData(appState.getActiveSecondaryColor(), appState.getActivePrimaryColor(), appState.getActiveShapeShadingType(), appState.getActiveShapeType());
+                    command = new CreateShapeCommand(graphics, startPoint, endPoint, rightClickedShapeData);
+                }
+                break;
+            case "SELECT":
+                command = new SelectCommand();
+                break;
+            case "MOVE":
+                command = new MoveCommand();
+                break;
         }
+
         command.run();
     }
 }
