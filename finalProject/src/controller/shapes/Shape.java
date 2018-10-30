@@ -12,21 +12,21 @@ public class Shape implements IShape {
     private Graphics2D graphics;
     private Point startPoint;
     private Point endPoint;
-    private ShapeData shapeData;
     private ShapeColor primaryShapeColor;
     private ShapeColor secondaryShapeColor;
     private ShapeShadingType shapeShadingType;
     private ShapeType shapeType;
+    private ShapeData shapeData;
 
-    public Shape(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData){
+    public Shape(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData) {
         this.graphics = graphics;
         this.startPoint = startPoint;
         this.endPoint = endPoint;
-        this.shapeData = shapeData;
         this.primaryShapeColor = shapeData.activePrimaryColor;
         this.secondaryShapeColor = shapeData.activeSecondaryColor;
         this.shapeShadingType = shapeData.activeShapeShadingType;
         this.shapeType = shapeData.activeShapeType;
+        this.shapeData = shapeData;
     }
 
     @Override
@@ -71,6 +71,36 @@ public class Shape implements IShape {
     @Override
     public ShapeType getShapeType() {
         return shapeType;
+    }
+
+    @Override
+    public Graphics2D getGraphics(){
+        return graphics;
+    }
+
+    @Override
+    public ShapeData getShapeData(){
+        return shapeData;
+    }
+
+    @Override
+    public int getStartX() {
+        return startPoint.getX();
+    }
+
+    @Override
+    public int getStartY() {
+        return startPoint.getY();
+    }
+
+    @Override
+    public int getEndX() {
+        return endPoint.getX();
+    }
+
+    @Override
+    public int getEndY() {
+        return endPoint.getY();
     }
 
 }

@@ -26,6 +26,7 @@ public class Ellipse implements IShape {
     private ShapeColor secondaryShapeColor;
     private ShapeShadingType shapeShadingType;
     private ShapeType shapeType;
+    private ShapeData shapeData;
 
     public Ellipse(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData){
         this.graphics = graphics;
@@ -35,6 +36,7 @@ public class Ellipse implements IShape {
         this.secondaryShapeColor = shapeData.activeSecondaryColor;
         this.shapeShadingType = shapeData.activeShapeShadingType;
         this.shapeType = shapeData.activeShapeType;
+        this.shapeData = shapeData;
     }
 
     @Override
@@ -88,4 +90,33 @@ public class Ellipse implements IShape {
         return shapeType;
     }
 
+    @Override
+    public Graphics2D getGraphics(){
+        return graphics;
+    }
+
+    @Override
+    public ShapeData getShapeData(){
+        return shapeData;
+    }
+
+    @Override
+    public int getStartX() {
+        return startPoint.getX();
+    }
+
+    @Override
+    public int getStartY() {
+        return startPoint.getY();
+    }
+
+    @Override
+    public int getEndX() {
+        return endPoint.getX();
+    }
+
+    @Override
+    public int getEndY() {
+        return endPoint.getY();
+    }
 }
