@@ -2,8 +2,8 @@ package controller;
 
 import controller.commands.ICommand;
 import controller.commands.CreateShapeCommand;
-import controller.commands.MoveCommand;
-import controller.commands.SelectCommand;
+import controller.commands.MoveShapeCommand;
+import controller.commands.SelectShapeCommand;
 import model.persistence.ApplicationState;
 import model.persistence.ShapeData;
 
@@ -16,6 +16,7 @@ public class MouseHandler extends MouseAdapter {
     private Point startPoint;
     private Point endPoint;
     private ApplicationState appState;
+    private MouseEvent e;
 
     public MouseHandler(ApplicationState appState, Graphics2D graphics){
         this.appState = appState;
@@ -24,6 +25,7 @@ public class MouseHandler extends MouseAdapter {
 
     @Override
     public void mousePressed(MouseEvent e){
+        this.e = e;
         int xClick = e.getX();
         int yClick = e.getY();
 
@@ -42,19 +44,21 @@ public class MouseHandler extends MouseAdapter {
 
         switch (appState.getActiveStartAndEndPointMode().toString()){
             case "DRAW":
+                // left click
                 if(e.getButton() == MouseEvent.BUTTON1) {
                     command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeData);
                 }
+                // right click
                 else if(e.getButton() == MouseEvent.BUTTON3){
                     ShapeData rightClickedShapeData = new ShapeData(appState.getActiveSecondaryColor(), appState.getActivePrimaryColor(), appState.getActiveShapeShadingType(), appState.getActiveShapeType());
                     command = new CreateShapeCommand(graphics, startPoint, endPoint, rightClickedShapeData);
                 }
                 break;
             case "SELECT":
-                command = new SelectCommand();
+                command = new SelectShapeCommand(startPoint, endPoint);
                 break;
             case "MOVE":
-                command = new MoveCommand();
+                command = new MoveShapeCommand(startPoint, endPoint);
                 break;
         }
 

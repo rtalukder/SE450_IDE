@@ -13,6 +13,11 @@ public class ShapeList implements ISubject {
         notifyObserver();
     }
 
+    public static void deleteFromShapeList(IShape shape){
+        shapeList.remove(shape);
+        notifyObserver();
+    }
+
     @Override
     public void registerObserver(IShapeDrawObserver observer) {
         observers.add(observer);

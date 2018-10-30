@@ -14,11 +14,6 @@ import java.awt.*;
 import java.lang.reflect.Field;
 
 public class Rectangle implements IShape {
-    private int x;
-    private int y;
-    private int height;
-    private int width;
-
     private Graphics2D graphics;
     private Point startPoint;
     private Point endPoint;
@@ -26,6 +21,7 @@ public class Rectangle implements IShape {
     private ShapeColor secondaryShapeColor;
     private ShapeShadingType shapeShadingType;
     private ShapeType shapeType;
+    private ShapeData shapeData;
 
     public Rectangle(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData){
         this.graphics = graphics;
@@ -35,14 +31,15 @@ public class Rectangle implements IShape {
         this.secondaryShapeColor = shapeData.activeSecondaryColor;
         this.shapeShadingType = shapeData.activeShapeShadingType;
         this.shapeType = shapeData.activeShapeType;
+        this.shapeData = shapeData;
     }
 
     @Override
     public void drawShape() {
-        x = Math.min(startPoint.getX(), endPoint.getX());
-        y = Math.min(startPoint.getY(), endPoint.getY());
-        width = Math.abs(startPoint.getX() - endPoint.getX());
-        height = Math.abs(startPoint.getY() - endPoint.getY());
+        int x = Math.min(startPoint.getX(), endPoint.getX());
+        int y = Math.min(startPoint.getY(), endPoint.getY());
+        int width = Math.abs(startPoint.getX() - endPoint.getX());
+        int height = Math.abs(startPoint.getY() - endPoint.getY());
 
         String shapeShadingTypeString = shapeShadingType.toString();
         IShadingTypeStrategy strategy = null;
@@ -86,6 +83,36 @@ public class Rectangle implements IShape {
     @Override
     public ShapeType getShapeType() {
         return shapeType;
+    }
+
+    @Override
+    public ShapeData getShapeData(){
+        return shapeData;
+    }
+
+    @Override
+    public Graphics2D getGraphics(){
+        return graphics;
+    }
+
+    @Override
+    public int getStartX() {
+        return startPoint.getX();
+    }
+
+    @Override
+    public int getStartY() {
+        return startPoint.getY();
+    }
+
+    @Override
+    public int getEndX() {
+        return endPoint.getX();
+    }
+
+    @Override
+    public int getEndY() {
+        return endPoint.getY();
     }
 
 }
