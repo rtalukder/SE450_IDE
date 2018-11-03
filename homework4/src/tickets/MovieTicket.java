@@ -1,7 +1,5 @@
 package tickets;
 
-import java.util.Calendar;
-
 public class MovieTicket {
     private final String movieName;
     private final String movieStudio;

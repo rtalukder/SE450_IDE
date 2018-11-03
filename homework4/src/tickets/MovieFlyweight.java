@@ -1,11 +1,10 @@
 package tickets;
 
 import java.util.Calendar;
-import java.util.List;
 
 public class MovieFlyweight implements IMovieTicket, IMovieTicketFactory {
     private MovieTicket movieTicket;
-    private Calendar showTime = null;
+    private Calendar showTime;
 
     public MovieFlyweight(MovieTicket movieTicket) {
         this.movieTicket = movieTicket;
@@ -36,4 +35,5 @@ public class MovieFlyweight implements IMovieTicket, IMovieTicketFactory {
     public Calendar getShowtime() {
         return showTime;
     }
+
 }
