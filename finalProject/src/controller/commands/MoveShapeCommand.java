@@ -18,21 +18,28 @@ public class MoveShapeCommand implements ICommand {
     }
 
     @Override
-    public void run() {
-        List<IShape> movedShapes = new ArrayList<>();
-        int deltaX = Math.abs(endPoint.getX() - startPoint.getX());
-        int deltaY = Math.abs(endPoint.getY() - startPoint.getY());
+    public void run(){
+        try {
+            List<IShape> movedShapes = new ArrayList<>();
+            int deltaX = Math.abs(endPoint.getX() - startPoint.getX());
+            int deltaY = Math.abs(endPoint.getY() - startPoint.getY());
 
-        for (IShape shape : SelectShapeCommand.selectedShapes){
-            Point newStartPoint = new Point(shape.getStartX() + deltaX, shape.getStartY() + deltaY);
-            Point newEndPoint = new Point(shape.getEndX() + deltaX, shape.getEndY() + deltaY);
+            for (IShape shape : SelectShapeCommand.selectedShapes) {
+                Point newStartPoint = new Point(shape.getStartX() + deltaX, shape.getStartY() + deltaY);
+                Point newEndPoint = new Point(shape.getEndX() + deltaX, shape.getEndY() + deltaY);
 
-            movedShapes.add(new Shape(shape.getGraphics(), newStartPoint, newEndPoint, shape.getShapeData()));
-            ShapeList.deleteFromShapeList(shape);
+                movedShapes.add(new Shape(shape.getGraphics(), newStartPoint, newEndPoint, shape.getShapeData()));
+                ShapeList.deleteFromShapeList(shape);
+            }
+
+            for (IShape shape : movedShapes){
+                ShapeList.addToShapeList(shape);
+            }
+        }
+        catch (NullPointerException nullPointer){
+            System.out.println("Empty selectedShapes list");
         }
 
-        for (IShape shape : movedShapes){
-            ShapeList.shapeList.add(shape);
-        }
+
     }
 }

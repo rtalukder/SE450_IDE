@@ -26,24 +26,6 @@ public class Main {
         handler.registerObserver(observer);
 
         controller.setup();
-/*
-        // For example purposes only; remove from your final project.
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        Graphics2D graphics2d = paintCanvas.getGraphics2D();
-        graphics2d.setColor(Color.RED);
 
-        graphics2d.fillRect(12, 13, 200, 400);
-        graphics2d.setStroke(new BasicStroke(5));
-        graphics2d.setColor(Color.BLUE);
-        graphics2d.drawRect(300, 150, 150, 200);
-        graphics2d.drawRect(150, 150, 100, 200);
-        graphics2d.setColor(Color.RED);
-        graphics2d.drawRect(50, 600, 500, 10);
-
-*/
     }
 }

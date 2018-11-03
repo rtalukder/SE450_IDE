@@ -14,6 +14,9 @@ import java.awt.*;
 import java.lang.reflect.Field;
 
 public class Rectangle implements IShape {
+    private final Color deleteShapeFill = Color.WHITE;
+    private final Color deleteShapeOutline = Color.WHITE;
+
     private Graphics2D graphics;
     private Point startPoint;
     private Point endPoint;

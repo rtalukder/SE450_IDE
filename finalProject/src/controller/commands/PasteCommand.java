@@ -1,0 +1,36 @@
+package controller.commands;
+
+import controller.Point;
+import controller.ShapeList;
+import controller.shapes.IShape;
+import controller.shapes.Shape;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PasteCommand implements ICommand {
+
+    public PasteCommand(){}
+
+    @Override
+    public void run() {
+        try {
+            List<IShape> pastedShapes = new ArrayList<>();
+            for (IShape shape : CopyCommand.copyShapeList) {
+                int deltaX = 100;
+                int deltaY = 100;
+
+                Point newStartPoint = new Point(shape.getStartX() + deltaX, shape.getStartY() + deltaY);
+                Point newEndPoint = new Point(shape.getEndX() + deltaX, shape.getEndY() + deltaY);
+
+                pastedShapes.add(new Shape(shape.getGraphics(), newStartPoint, newEndPoint, shape.getShapeData()));
+            }
+            for (IShape shape : pastedShapes) {
+                ShapeList.addToShapeList(shape);
+            }
+        }
+        catch (NullPointerException nullPointer){
+            System.out.println("Empty copyShapeList list");
+        }
+    }
+}

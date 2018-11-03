@@ -14,10 +14,8 @@ import java.lang.reflect.Field;
 import java.awt.*;
 
 public class Ellipse implements IShape {
-    private int x;
-    private int y;
-    private int height;
-    private int width;
+    private final Color deleteShapeFill = Color.WHITE;
+    private final Color deleteShapeOutline = Color.WHITE;
 
     private Graphics2D graphics;
     private Point startPoint;
@@ -41,10 +39,10 @@ public class Ellipse implements IShape {
 
     @Override
     public void drawShape() {
-        x = Math.min(startPoint.getX(), endPoint.getX());
-        y = Math.min(startPoint.getY(), endPoint.getY());
-        width = Math.abs(startPoint.getX() - endPoint.getX());
-        height = Math.abs(startPoint.getY() - endPoint.getY());
+        int x = Math.min(startPoint.getX(), endPoint.getX());
+        int y = Math.min(startPoint.getY(), endPoint.getY());
+        int width = Math.abs(startPoint.getX() - endPoint.getX());
+        int height = Math.abs(startPoint.getY() - endPoint.getY());
 
         String shapeShadingTypeString = shapeShadingType.toString();
         IShadingTypeStrategy strategy = null;

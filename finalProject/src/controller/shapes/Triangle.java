@@ -12,6 +12,8 @@ import java.lang.reflect.Field;
 
 public class Triangle implements IShape {
     private final int MAX_NUMBER_OF_POINTS = 3;
+    private final Color deleteShapeFill = Color.WHITE;
+    private final Color deleteShapeOutline = Color.WHITE;
 
     private Graphics2D graphics;
     private Point startPoint;
