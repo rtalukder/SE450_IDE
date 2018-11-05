@@ -51,6 +51,7 @@ public class MouseHandler extends MouseAdapter {
                 }
                 // right click
                 else if(e.getButton() == MouseEvent.BUTTON3) {
+                    // primary and secondary colors are switches for ShapeData params
                     ShapeData rightClickedShapeData = new ShapeData(appState.getActiveSecondaryColor(), appState.getActivePrimaryColor(), appState.getActiveShapeShadingType(), appState.getActiveShapeType());
                     command = new CreateShapeCommand(graphics, startPoint, endPoint, rightClickedShapeData);
                 }

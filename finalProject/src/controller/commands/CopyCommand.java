@@ -1,6 +1,6 @@
 package controller.commands;
 
-import controller.shapes.IShape;
+import view.interfaces.IShape;
 
 import java.util.ArrayList;
 import java.util.List;

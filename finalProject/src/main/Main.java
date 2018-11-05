@@ -1,6 +1,7 @@
 package main;
 
 import controller.*;
+import controller.interfaces.IJPaintController;
 import model.persistence.ApplicationState;
 import view.gui.Gui;
 import view.gui.GuiWindow;
@@ -8,7 +9,6 @@ import view.gui.PaintCanvas;
 import view.interfaces.IGuiWindow;
 import view.interfaces.IUiModule;
 
-import java.awt.*;
 import java.awt.event.*;
 
 public class Main {

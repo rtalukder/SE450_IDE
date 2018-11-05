@@ -4,8 +4,6 @@ import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
 
-import java.awt.*;
-
 public class ShapeData  {
 
     public ShapeColor activePrimaryColor;
@@ -19,9 +17,4 @@ public class ShapeData  {
         activeShapeShadingType = shapeShadingType;
         activeShapeType = shapeType;
     }
-
-    public ShapeData getShapeData(){
-        return this;
-    }
-
 }
