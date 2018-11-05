@@ -21,7 +21,7 @@ public class Main {
         MouseAdapter mouseAdapter = new MouseHandler(appState, paintCanvas.getGraphics2D());
         paintCanvas.addMouseListener(mouseAdapter);
 
-        ShapeDraw observer = new ShapeDraw();
+        ShapeDraw observer = new ShapeDraw(paintCanvas.getGraphics2D());
         ShapeList handler = new ShapeList();
         handler.registerObserver(observer);
 

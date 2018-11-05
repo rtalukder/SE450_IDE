@@ -41,7 +41,7 @@ public class DeleteCommand implements ICommand, IUndoable {
     public void redo() {
         try {
             for (IShape shape : SelectShapeCommand.selectedShapes) {
-                ShapeList.addToShapeList(shape);
+                ShapeList.deleteFromShapeList(shape);
             }
         }
         catch (NullPointerException nullPointer){

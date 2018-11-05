@@ -7,11 +7,10 @@ import view.interfaces.IShape;
 import view.shapes.Shape;
 import controller.Point;
 import model.persistence.ShapeData;
-import view.gui.PaintCanvas;
 
 import java.awt.*;
 
-public class CreateShapeCommand extends PaintCanvas implements ICommand, IUndoable {
+public class CreateShapeCommand implements ICommand, IUndoable {
     private IShape shape;
 
     public CreateShapeCommand(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData){
