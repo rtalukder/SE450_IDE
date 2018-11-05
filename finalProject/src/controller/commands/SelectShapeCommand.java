@@ -1,7 +1,7 @@
 package controller.commands;
 
 import controller.ShapeList;
-import controller.shapes.IShape;
+import view.interfaces.IShape;
 import controller.Point;
 
 import java.util.ArrayList;

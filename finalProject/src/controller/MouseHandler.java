@@ -6,6 +6,7 @@ import controller.commands.MoveShapeCommand;
 import controller.commands.SelectShapeCommand;
 import model.persistence.ApplicationState;
 import model.persistence.ShapeData;
+import view.gui.PaintCanvas;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -49,7 +50,8 @@ public class MouseHandler extends MouseAdapter {
                     command = new CreateShapeCommand(graphics, startPoint, endPoint, shapeData);
                 }
                 // right click
-                else if(e.getButton() == MouseEvent.BUTTON3){
+                else if(e.getButton() == MouseEvent.BUTTON3) {
+                    // primary and secondary colors are switches for ShapeData params
                     ShapeData rightClickedShapeData = new ShapeData(appState.getActiveSecondaryColor(), appState.getActivePrimaryColor(), appState.getActiveShapeShadingType(), appState.getActiveShapeType());
                     command = new CreateShapeCommand(graphics, startPoint, endPoint, rightClickedShapeData);
                 }

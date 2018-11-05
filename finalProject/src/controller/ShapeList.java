@@ -1,6 +1,8 @@
 package controller;
 
-import controller.shapes.IShape;
+import controller.interfaces.IShapeDrawObserver;
+import controller.interfaces.ISubject;
+import view.interfaces.IShape;
 import java.util.List;
 import java.util.ArrayList;
 
