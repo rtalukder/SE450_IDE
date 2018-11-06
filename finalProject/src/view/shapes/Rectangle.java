@@ -2,21 +2,16 @@ package view.shapes;
 
 import controller.Point;
 import view.interfaces.IShape;
-import view.shapes.shading.FilledInRectangle;
-import view.interfaces.IShadingTypeStrategy;
-import view.shapes.shading.OutlinedAndFilledRectangle;
-import view.shapes.shading.OutlinedRectangle;
+import view.interfaces.IShadingType;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
 import model.persistence.ShapeData;
+import view.shapes.shading.RectangleShading;
 
 import java.awt.*;
 
 public class Rectangle implements IShape {
-    private final Color deleteShapeFill = Color.WHITE;
-    private final Color deleteShapeOutline = Color.WHITE;
-
     private Graphics2D graphics;
     private Point startPoint;
     private Point endPoint;
@@ -44,28 +39,25 @@ public class Rectangle implements IShape {
         int width = Math.abs(startPoint.getX() - endPoint.getX());
         int height = Math.abs(startPoint.getY() - endPoint.getY());
 
-        String shapeShadingTypeString = shapeShadingType.toString();
-        IShadingTypeStrategy strategy = null;
-
         TranslateEnumColor colorTranslate = new TranslateEnumColor();
         Color primaryColor = colorTranslate.getColor(primaryShapeColor);
         Color secondaryColor = colorTranslate.getColor(secondaryShapeColor);
 
-        switch(shapeShadingTypeString){
+        IShadingType shapeToShade = new RectangleShading(graphics, x, y, width, height, primaryColor, secondaryColor);
+
+        switch(shapeShadingType.toString()){
             case "FILLED_IN":
-                strategy = new FilledInRectangle();
+                shapeToShade.filledInShading();
                 break;
 
             case "OUTLINE":
-                strategy = new OutlinedRectangle();
+                shapeToShade.outlinedShading();
                 break;
 
             case "OUTLINE_AND_FILLED_IN":
-                strategy = new OutlinedAndFilledRectangle();
+                shapeToShade.outlinedAndFilledShading();
                 break;
         }
-
-        strategy.drawShape(graphics, x, y, width, height, primaryColor, secondaryColor);
     }
 
     @Override
