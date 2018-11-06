@@ -1,11 +1,9 @@
 package view.shapes;
 
 import controller.Point;
+import view.interfaces.IShadingType;
 import view.interfaces.IShape;
-import view.shapes.shading.FilledInEllipse;
-import view.interfaces.IShadingTypeStrategy;
-import view.shapes.shading.OutlinedAndFilledEllipse;
-import view.shapes.shading.OutlinedEllipse;
+import view.shapes.shading.EllipseShading;
 import model.ShapeColor;
 import model.ShapeShadingType;
 import model.ShapeType;
@@ -44,28 +42,25 @@ public class Ellipse implements IShape {
         int width = Math.abs(startPoint.getX() - endPoint.getX());
         int height = Math.abs(startPoint.getY() - endPoint.getY());
 
-        String shapeShadingTypeString = shapeShadingType.toString();
-        IShadingTypeStrategy strategy = null;
-
         TranslateEnumColor colorTranslate = new TranslateEnumColor();
         Color primaryColor = colorTranslate.getColor(primaryShapeColor);
         Color secondaryColor = colorTranslate.getColor(secondaryShapeColor);
 
-        switch(shapeShadingTypeString){
+        IShadingType shapeToShade = new EllipseShading(graphics, x, y, width, height, primaryColor, secondaryColor);
+
+        switch(shapeShadingType.toString()){
             case "FILLED_IN":
-                strategy = new FilledInEllipse();
+                shapeToShade.filledInShading();
                 break;
 
             case "OUTLINE":
-                strategy = new OutlinedEllipse();
+                shapeToShade.outlinedShading();
                 break;
 
             case "OUTLINE_AND_FILLED_IN":
-                strategy = new OutlinedAndFilledEllipse();
+                shapeToShade.outlinedAndFilledShading();
                 break;
         }
-
-        strategy.drawShape(graphics, x, y, width, height, primaryColor, secondaryColor);
     }
 
     @Override

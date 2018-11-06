@@ -1,5 +1,6 @@
 package view.shapes;
 
+import view.interfaces.IShadingType;
 import view.interfaces.IShadingTypeStrategyTriangle;
 import view.interfaces.IShape;
 import view.shapes.shading.*;
@@ -38,17 +39,19 @@ public class Triangle implements IShape {
 
     @Override
     public void drawShape() {
-        int x1 = 0, x3= 0, y1= 0, y3= 0;
+        int x1 = 0, x3 = 0, y1 = 0, y3 = 0;
         int x2 = Math.min(startPoint.getX(), endPoint.getX());
         int y2 = 0;
-        if(x2 == startPoint.getX()){
+
+        if (x2 == startPoint.getX()) {
             y2 = startPoint.getY();
             x1 = endPoint.getX();
             y1 = startPoint.getY();
             x3 = Math.max(startPoint.getX(), endPoint.getX());
             y3 = endPoint.getY();
         }
-        else if(x2 == endPoint.getX()){
+
+        else if (x2 == endPoint.getX()) {
             x1 = startPoint.getX();
             y1 = endPoint.getY();
             y2 = startPoint.getY();
@@ -56,31 +59,28 @@ public class Triangle implements IShape {
             y3 = endPoint.getY();
         }
 
-        int [] xArray = {x1,x2,x3};
-        int [] yArray = {y1,y2,y3};
-
-        String shapeShadingTypeString = shapeShadingType.toString();
-        IShadingTypeStrategyTriangle strategy = null;
+        int[] xArray = {x1, x2, x3};
+        int[] yArray = {y1, y2, y3};
 
         TranslateEnumColor colorTranslate = new TranslateEnumColor();
         Color primaryColor = colorTranslate.getColor(primaryShapeColor);
         Color secondaryColor = colorTranslate.getColor(secondaryShapeColor);
 
-        switch(shapeShadingTypeString){
+        IShadingType shapeToShade = new TriangleShading(graphics, xArray, yArray, primaryColor, secondaryColor, MAX_NUMBER_OF_POINTS);
+
+        switch (shapeShadingType.toString()) {
             case "FILLED_IN":
-                strategy = new FilledInTriangle();
+                shapeToShade.filledInShading();
                 break;
 
             case "OUTLINE":
-                strategy = new OutlinedTriangle();
+                shapeToShade.outlinedShading();
                 break;
 
             case "OUTLINE_AND_FILLED_IN":
-                strategy = new OutlinedAndFilledTriangle();
+                shapeToShade.outlinedAndFilledShading();
                 break;
         }
-
-        strategy.drawShape(graphics, xArray, yArray, primaryColor, secondaryColor, MAX_NUMBER_OF_POINTS);
     }
 
     @Override
