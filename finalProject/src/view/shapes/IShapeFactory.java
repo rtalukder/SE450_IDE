@@ -6,9 +6,9 @@ import view.interfaces.IShape;
 
 import java.awt.*;
 
-public class ShapeFactory {
+public class IShapeFactory {
 
-    public ShapeFactory() {}
+    public IShapeFactory() {}
 
     public static IShape createRectangle(Graphics2D graphics, Point startPoint, Point endPoint, ShapeData shapeData){
         return new Rectangle(graphics, startPoint, endPoint, shapeData);

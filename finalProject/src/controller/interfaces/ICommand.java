@@ -1,4 +1,4 @@
-package controller.commands;
+package controller.interfaces;
 
 public interface ICommand {
      void run();

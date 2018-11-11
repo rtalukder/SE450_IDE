@@ -2,6 +2,7 @@ package controller.commands;
 
 
 import controller.ShapeList;
+import controller.interfaces.ICommand;
 import model.interfaces.IUndoable;
 import model.persistence.CommandHistory;
 import view.interfaces.IShape;

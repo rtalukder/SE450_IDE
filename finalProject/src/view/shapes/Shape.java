@@ -34,19 +34,18 @@ public class Shape implements IShape {
     public void drawShape() {
 
         IShape shape = null;
-        String shapeTypeString = (shapeData.activeShapeType).toString();
 
-        switch(shapeTypeString){
+        switch((shapeData.activeShapeType).toString()){
             case "RECTANGLE":
-                shape = ShapeFactory.createRectangle(graphics, startPoint, endPoint, shapeData);
+                shape = IShapeFactory.createRectangle(graphics, startPoint, endPoint, shapeData);
                 break;
 
             case "ELLIPSE":
-                shape = ShapeFactory.createEllipse(graphics, startPoint, endPoint, shapeData);
+                shape = IShapeFactory.createEllipse(graphics, startPoint, endPoint, shapeData);
                 break;
 
             case "TRIANGLE":
-                shape = ShapeFactory.createTriangle(graphics, startPoint, endPoint, shapeData);
+                shape = IShapeFactory.createTriangle(graphics, startPoint, endPoint, shapeData);
                 break;
         }
 

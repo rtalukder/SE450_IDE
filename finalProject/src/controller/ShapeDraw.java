@@ -1,11 +1,7 @@
 package controller;
 
 import controller.interfaces.IShapeDrawObserver;
-import view.gui.PaintCanvas;
 import view.interfaces.IShape;
-import view.shapes.Rectangle;
-import view.shapes.Shape;
-
 import java.awt.*;
 
 public class ShapeDraw implements IShapeDrawObserver {

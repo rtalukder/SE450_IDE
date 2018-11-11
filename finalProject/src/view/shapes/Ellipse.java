@@ -12,9 +12,6 @@ import model.persistence.ShapeData;
 import java.awt.*;
 
 public class Ellipse implements IShape {
-    private final Color deleteShapeFill = Color.WHITE;
-    private final Color deleteShapeOutline = Color.WHITE;
-
     private Graphics2D graphics;
     private Point startPoint;
     private Point endPoint;

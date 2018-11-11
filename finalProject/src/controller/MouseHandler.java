@@ -1,12 +1,11 @@
 package controller;
 
-import controller.commands.ICommand;
+import controller.interfaces.ICommand;
 import controller.commands.CreateShapeCommand;
 import controller.commands.MoveShapeCommand;
 import controller.commands.SelectShapeCommand;
 import model.persistence.ApplicationState;
 import model.persistence.ShapeData;
-import view.gui.PaintCanvas;
 
 import java.awt.*;
 import java.awt.event.MouseAdapter;

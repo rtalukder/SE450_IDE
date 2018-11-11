@@ -2,6 +2,7 @@ package controller.commands;
 
 import controller.Point;
 import controller.ShapeList;
+import controller.interfaces.ICommand;
 import model.interfaces.IUndoable;
 import model.persistence.CommandHistory;
 import view.interfaces.IShape;
@@ -33,6 +34,7 @@ public class MoveShapeCommand implements ICommand, IUndoable {
                 Point newEndPoint = new Point(shape.getEndX() + deltaX, shape.getEndY() + deltaY);
 
                 movedShapes.add(new Shape(shape.getGraphics(), newStartPoint, newEndPoint, shape.getShapeData()));
+
                 ShapeList.deleteFromShapeList(shape);
             }
 

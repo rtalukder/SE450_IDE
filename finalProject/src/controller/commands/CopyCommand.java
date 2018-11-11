@@ -1,5 +1,6 @@
 package controller.commands;
 
+import controller.interfaces.ICommand;
 import view.interfaces.IShape;
 
 import java.util.ArrayList;
