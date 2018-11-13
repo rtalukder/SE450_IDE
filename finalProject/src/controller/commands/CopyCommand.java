@@ -9,8 +9,6 @@ import java.util.List;
 public class CopyCommand implements ICommand {
     public static List<IShape> copyShapeList = new ArrayList<>();
 
-    public CopyCommand() {}
-
     @Override
     public void run() {
         try {

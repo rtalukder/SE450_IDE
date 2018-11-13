@@ -14,8 +14,6 @@ import java.util.List;
 public class PasteCommand implements ICommand, IUndoable {
     private List<IShape> pastedShapes = new ArrayList<>();
 
-    public PasteCommand(){}
-
     @Override
     public void run() {
         try {

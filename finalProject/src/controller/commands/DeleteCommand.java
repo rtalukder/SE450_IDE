@@ -10,8 +10,6 @@ import view.interfaces.IShape;
 
 public class DeleteCommand implements ICommand, IUndoable {
 
-    public DeleteCommand(){}
-
     @Override
     public void run() {
         try {
